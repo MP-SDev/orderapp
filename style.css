@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+}
+
+.content {
+    padding: 0 120px;
+}
+
+.headerContainer {
+    background-color: #E76C1F;
+    height: 128px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.descHeroImg {
+    background-image: url(./assets/img/hero_photo.jpg);
+    background-size: cover;
+    background-position: bottom;
+    height: 508px;
+    width: 100vw;
+}
+
+.descLogoImg {
+    height: 200px;
+    width: 200px;
+    border-radius: 200px;
+    border: 13px solid #FDEADC;
+    box-shadow: 2px 4px 4px 0 #00000040;
+}
