@@ -1,4 +1,4 @@
-body {
+body, h1, h2, h3, p {
     margin: 0;
 }
 
@@ -14,12 +14,19 @@ body {
     align-items: center;
 }
 
+.descCompany {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
 .descHeroImg {
     background-image: url(./assets/img/hero_photo.jpg);
     background-size: cover;
     background-position: bottom;
     height: 508px;
-    width: 100vw;
+    width: 100dvw;
 }
 
 .descLogoImg {
@@ -28,4 +35,57 @@ body {
     border-radius: 200px;
     border: 13px solid #FDEADC;
     box-shadow: 2px 4px 4px 0 #00000040;
+    margin-top: -100px;
 }
+
+.sectionOverview {
+    background-color: #E76C1F;
+    height: 60px;
+    color: #FFFFFF;
+    display: flex;
+}
+
+.menuContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    background-color: #FDEADC;
+    height: 141px;
+    width: 50dvw;
+    border-radius: 12px;
+    padding: 10px;
+    margin-top: 15px;
+    display: flex;
+}
+
+.menuImg {
+    height: 121px;
+    width: 207px;
+    background-image: url(./assets/img/veggie-mushroom-black-burger.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+}
+
+.menuDetailsContainer {
+    display: flex;
+    padding: 10px;
+}
+
+.menuDetailsLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.menuDetailsRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
