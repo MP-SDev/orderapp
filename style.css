@@ -1,3 +1,7 @@
+* {
+    scroll-behavior: smooth;
+}
+
 body, h1, h2, h3, p {
     margin: 0;
 }
@@ -18,7 +22,6 @@ body, h1, h2, h3, p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 50px;
 }
 
 .descHeroImg {
@@ -43,11 +46,14 @@ body, h1, h2, h3, p {
     height: 60px;
     color: #FFFFFF;
     display: flex;
+    margin-top: 50px;
+    margin-bottom: 16px;
 }
 
 .menuContainer {
     display: flex;
     flex-direction: column;
+    gap: 16px;
 }
 
 .menu {
@@ -56,7 +62,6 @@ body, h1, h2, h3, p {
     width: 50dvw;
     border-radius: 12px;
     padding: 10px;
-    margin-top: 15px;
     display: flex;
 }
 
@@ -89,3 +94,48 @@ body, h1, h2, h3, p {
     align-items: flex-start;
 }
 
+.menuBasketContainer {
+    display: flex;
+}
+
+.basket {
+    background-color: #363534;
+    height: 794px;
+    width: 435px;
+    padding: 10px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    position: sticky;
+    top: 0;
+}
+
+.basketContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    background-color: #E76C1F;
+    color: #FFFFFF;
+    height: 128px;
+    margin-top: 50px;
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 64px;
+    padding-bottom: 32px;
+    gap: 72px;
+}
+
+.footerCopyright {
+    display: flex;
+}
+
+.footerCopyright img {
+    height: 20px;
+    width: 20px;
+}
