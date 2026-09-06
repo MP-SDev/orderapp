@@ -7,11 +7,16 @@ body, h1, h2, h3, p {
 }
 
 .content {
+    margin: auto;
+    max-width: 1440px;
     padding: 0 120px;
 }
 
-.headerContainer {
+header {
     background-color: #E76C1F;
+}
+
+.headerContainer {
     height: 128px;
     display: flex;
     justify-content: space-between;
@@ -22,6 +27,7 @@ body, h1, h2, h3, p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .descHeroImg {
@@ -46,7 +52,6 @@ body, h1, h2, h3, p {
     height: 60px;
     color: #FFFFFF;
     display: flex;
-    margin-top: 50px;
     margin-bottom: 16px;
 }
 
@@ -96,24 +101,36 @@ body, h1, h2, h3, p {
 
 .menuBasketContainer {
     display: flex;
+    width: 100dvw;
 }
 
 .basket {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
     background-color: #363534;
-    height: 794px;
+    color: #FDEADC;
+    height: 50dvh;
     width: 435px;
-    padding: 10px;
+    padding: 50px 20px;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     position: sticky;
     top: 0;
+    gap: 50px;
+}
+
+.basket img {
+    width: 128px;
 }
 
 .basketContainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
+    
 }
 
 footer {
