@@ -59,6 +59,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    flex: 1;
 }
 
 .menu {
@@ -112,7 +113,7 @@ header {
     background-color: #363534;
     color: #FDEADC;
     height: 50dvh;
-    width: 435px;
+    width: 344px;
     padding: 50px 20px;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
