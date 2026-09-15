@@ -4,6 +4,14 @@
     padding: 0 120px;
 }
 
+body {
+    font-family: "Palanquin-Regular";
+}
+
+h1 {
+    font-family: "PalanquinDark-Regular";
+}
+
 header {
     background-color: #E76C1F;
 }
@@ -148,4 +156,14 @@ footer {
 .footerCopyright img {
     height: 20px;
     width: 20px;
+}
+
+@font-face {
+  font-family: "Palanquin-Regular";
+  src: url("./assets/fonts/palanquin/Palanquin-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "PalanquinDark-Regular";
+  src: url("./assets/fonts/palanquin_dark/PalanquinDark-Regular.ttf") format("ttf");
 }
