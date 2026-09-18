@@ -71,12 +71,9 @@ header {
     display: flex;
 }
 
-.menuImg {
+.menuImg img {
     height: 121px;
     width: 207px;
-    background-image: url(./assets/img/veggie-mushroom-black-burger.jpg);
-    background-size: cover;
-    background-position: center;
     border-radius: 12px;
 }
 

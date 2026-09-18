@@ -11,7 +11,7 @@
     <script src="./scripts/templates.js"></script>
     <script src="./script.js"></script>
 </head>
-<body>
+<body onload="renderMenu()">
     <header>
         <div class="headerContainer content">
             <img src="./assets/img/Logo_02.png" alt="logo burgerhouse">
@@ -26,75 +26,8 @@
             <p>The best of Burgers, Pizza, and Greens, all in one great place.</p>
         </div>
         <div class="menuBasketContainer">
-            <div class="menuContainer">
-                <section>
-                    <div class="sectionOverview content">
-                        <img src="./assets/img/burger.png" alt="burger scetch">
-                        <h2>Burger & Sandwiches</h2>
-                    </div>
-                    <div class="menuContainer content">
-                        <div class="menu">
-                            <div class="menuImg"></div>
-                            <div class="menuDetailsContainer">
-                                <div class="menuDetailsLeft">
-                                    <h3>Veggie mushroom black burger</h3>
-                                    <p>Mixed green salad, Tomatoes, Edamame, Mushrooms</p>
-                                </div>
-                                <div class="menuDetailsRight">
-                                    <p>16,90€</p>
-                                    <button class="btnDishes">Add to basket</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="menu">
-                            <div class="menuImg"></div>
-                            <div class="menuDetailsContainer">
-                                <div class="menuDetailsLeft">
-                                    <h3>Veggie mushroom black burger</h3>
-                                    <p>Mixed green salad, Tomatoes, Edamame, Mushrooms</p>
-                                </div>
-                                <div class="menuDetailsRight">
-                                    <p>16,90€</p>
-                                    <button>Add to basket</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <div class="sectionOverview content">
-                        <img src="./assets/img/burger.png" alt="burger scetch">
-                        <h2>Burger & Sandwiches</h2>
-                    </div>
-                    <div class="menuContainer content">
-                        <div class="menu">
-                            <div class="menuImg"></div>
-                            <div class="menuDetailsContainer">
-                                <div class="menuDetailsLeft">
-                                    <h3>Veggie mushroom black burger</h3>
-                                    <p>Mixed green salad, Tomatoes, Edamame, Mushrooms</p>
-                                </div>
-                                <div class="menuDetailsRight">
-                                    <p>16,90€</p>
-                                    <button>Add to basket</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="menu">
-                            <div class="menuImg"></div>
-                            <div class="menuDetailsContainer">
-                                <div class="menuDetailsLeft">
-                                    <h3>Veggie mushroom black burger</h3>
-                                    <p>Mixed green salad, Tomatoes, Edamame, Mushrooms</p>
-                                </div>
-                                <div class="menuDetailsRight">
-                                    <p>16,90€</p>
-                                    <button>Add to basket</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+            <div id="menuSections" class="menuContainer">
+                
             </div>
             <div class="basketContainer">
                 <div class="basket">
