@@ -75,11 +75,13 @@ header {
     height: 121px;
     width: 207px;
     border-radius: 12px;
+    object-fit: cover;
 }
 
 .menuDetailsContainer {
     display: flex;
     padding: 10px;
+    flex: 1;
 }
 
 .menuDetailsLeft {
@@ -157,10 +159,10 @@ footer {
 
 @font-face {
   font-family: "Palanquin-Regular";
-  src: url("./assets/fonts/palanquin/Palanquin-Regular.ttf") format("ttf");
+  src: url("./assets/fonts/palanquin/Palanquin-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "PalanquinDark-Regular";
-  src: url("./assets/fonts/palanquin_dark/PalanquinDark-Regular.ttf") format("ttf");
+  src: url("./assets/fonts/palanquin_dark/PalanquinDark-Regular.ttf") format("truetype");
 }
