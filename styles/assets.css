@@ -16,4 +16,13 @@
 
 .bntBasket {
     background-color: #E76C1F;
+    height: 64px;
+    border-radius: 60px;
+    padding: 13px 55px;
+}
+
+.btnBasketControls {
+    background-color: #FDEADC;
+    border-radius: 20px;
+    border-color: transparent;
 }

@@ -15,19 +15,35 @@ function getMenuSectionsTemplate(category) {
 function getSectionMenuTemplate(name, desc, price, img) {
     return `
             <div class="menu">
-                            <div class="menuImg">
-                                <img src="${img}" alt="${name} picture">
-                            </div>
-                            <div class="menuDetailsContainer">
-                                <div class="menuDetailsLeft">
-                                    <h3>${name}</h3>
-                                    <p>${desc}</p>
-                                </div>
-                                <div class="menuDetailsRight">
-                                    <p>${price}€</p>
-                                    <button class="btnDishes">Add to basket</button>
-                                </div>
-                            </div>
-                        </div>
+                <div class="menuImg">
+                    <img src="${img}" alt="${name} picture">
+                </div>
+                <div class="menuDetailsContainer">
+                    <div class="menuDetailsLeft">
+                        <h3>${name}</h3>
+                        <p>${desc}</p>
+                    </div>
+                    <div class="menuDetailsRight">
+                        <p>${price}€</p>
+                        <button class="btnDishes">Add to basket</button>
+                    </div>
+                </div>
+            </div>
+            `
+}
+
+function getEmptyBasketTemplate() {
+    return `
+            <div class="basket">
+                <h3>Your Basket</h3>
+                <p>Nothing here yet. Go ahead and choose something delicious!</p>
+                <img src="./assets/img/empty-basket-scetch.png" alt="basket scetch">
+            </div>
+            `
+}
+
+function getFilledBasketTemplate() {
+    return `
+            
             `
 }

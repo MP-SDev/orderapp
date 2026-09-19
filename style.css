@@ -113,12 +113,12 @@ header {
     color: #FDEADC;
     height: 50dvh;
     width: 344px;
-    padding: 50px 20px;
+    padding: 50px 0px;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     position: sticky;
     top: 0;
-    gap: 50px;
+    gap: 20px;
 }
 
 .basket img {
@@ -130,7 +130,53 @@ header {
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    
+}
+
+.basketMenuList {
+    display: flex;
+    flex-direction: column;
+    height: 355px;
+    overflow: scroll;
+    gap: 10px;
+}
+
+.basketMenuListElement {
+    display: flex;
+    flex-direction: column;
+    color: #363534;
+    background-color: #FDEADC;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.basketMenuListElementDetails {
+    display: flex;
+    justify-content: space-between;
+}
+
+.basketMenuListElementControls {
+    display: flex;
+}
+
+.basketMenuListElementControls img {
+    height: 24px;
+    width: 24px;
+}
+
+.basketSum {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.basketSumElement {
+    display: flex;
+    justify-content: space-between;
+}
+
+.basketSumSeparator {
+    background-color: #FDEADC;
+    height: 2px;
 }
 
 footer {
