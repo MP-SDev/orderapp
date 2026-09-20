@@ -44,6 +44,49 @@ function getEmptyBasketTemplate() {
 
 function getFilledBasketTemplate() {
     return `
-            
+             <div class="basket">
+                <h3>Your Basket</h3>
+                <div id="basketMenuList" class="basketMenuList">
+                    
+                </div>
+                <div id="basketSum" class="basketSum">
+                    
+                </div>
+            </div>
+            `
+}
+
+function getFilledBasketMenuListTemplate(amount, name, price) {
+    return `
+            <div class="basketMenuListElement">
+                <p>${amount}x ${name}</p>
+                <div class="basketMenuListElementDetails">
+                    <div class="basketMenuListElementControls">
+                        <button class="btnBasketControls"><img src="./assets/icons/trash.png" alt="icon delete menu element"></button>
+                        <p>${amount}</p>
+                        <button class="btnBasketControls">+</button>
+                    </div>
+                    <p>${price}€</p>
+                </div>
+            </div>
+            `
+}
+
+function getFilledBasketSumTemplate(sumPrice, totalPrice) {
+    return `
+            <div class="basketSumElement">
+                <p>Subtotal</p>
+                <p>${sumPrice}€</p>
+            </div>
+            <div class="basketSumElement">
+                <p>Delivery fee</p>
+                <p>4,99€</p>
+            </div>
+            <div class="basketSumSeparator"></div>
+            <div class="basketSumElement">
+                <p>Total</p>
+                <p>${totalPrice}€</p>
+            </div>
+            <button class="bntBasket">Buy now (${totalPrice}€)</button>
             `
 }
