@@ -12,7 +12,7 @@ function getMenuSectionsTemplate(category) {
             `
 }
 
-function getSectionMenuTemplate(name, desc, price, img) {
+function getSectionMenuTemplate(name, desc, price, img, dishesIndex) {
     return `
             <div class="menu">
                 <div class="menuImg">
@@ -25,7 +25,7 @@ function getSectionMenuTemplate(name, desc, price, img) {
                     </div>
                     <div class="menuDetailsRight">
                         <p>${price}€</p>
-                        <button class="btnDishes">Add to basket</button>
+                        <button onclick="addMenu(${dishesIndex})" class="btnDishes">Add to basket</button>
                     </div>
                 </div>
             </div>
@@ -56,15 +56,15 @@ function getFilledBasketTemplate() {
             `
 }
 
-function getFilledBasketMenuListTemplate(amount, name, price) {
+function getFilledBasketMenuListTemplate(amount, name, price, dishesIndex) {
     return `
             <div class="basketMenuListElement">
                 <p>${amount}x ${name}</p>
                 <div class="basketMenuListElementDetails">
                     <div class="basketMenuListElementControls">
-                        <button class="btnBasketControls"><img src="./assets/icons/trash.png" alt="icon delete menu element"></button>
+                        <button onclick="subtractMenu(${dishesIndex})" class="btnBasketControls"><img src="./assets/icons/trash.png" alt="icon delete menu element"></button>
                         <p>${amount}</p>
-                        <button class="btnBasketControls">+</button>
+                        <button onclick="addMenu(${dishesIndex})" class="btnBasketControls">+</button>
                     </div>
                     <p>${price}€</p>
                 </div>
@@ -87,6 +87,6 @@ function getFilledBasketSumTemplate(sumPrice, totalPrice) {
                 <p>Total</p>
                 <p>${totalPrice}€</p>
             </div>
-            <button class="bntBasket">Buy now (${totalPrice}€)</button>
+            <button onclick="placeOrder()" class="bntBasket">Buy now (${totalPrice}€)</button>
             `
 }

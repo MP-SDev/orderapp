@@ -179,6 +179,43 @@ header {
     height: 2px;
 }
 
+.orderConfirmationModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.orderConfirmationModalContent {
+    background-color: #363534;
+    color: #FDEADC;
+    width: 400px;
+    margin: 30% auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.orderConfirmationModalContent img {
+    width: 80px;
+}
+
+.closeModal {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.closeModal:hover {
+    cursor: pointer;
+}
+
 footer {
     background-color: #E76C1F;
     color: #FFFFFF;
