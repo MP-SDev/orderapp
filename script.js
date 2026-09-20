@@ -27,7 +27,7 @@ function renderBasket() {
         if (dishes[dishesIndex].amount != 0) {
             basketMenuListRef.innerHTML += getFilledBasketMenuListTemplate(dishes[dishesIndex].amount, dishes[dishesIndex].name, dishes[dishesIndex].price);
             basketIsEmpty = false;
-            sumPrice = sumPrice + dishes[dishesIndex].amount * dishes[dishesIndex].price;
+            sumPrice = Math.round((sumPrice + dishes[dishesIndex].amount * dishes[dishesIndex].price)*100)/100;
         }
     }
     if (basketIsEmpty === false) {
