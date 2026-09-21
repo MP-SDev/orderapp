@@ -6,7 +6,7 @@ function renderMenu() {
             categorySelected = dishes[dishesIndex].category;
             menuSectionsRef.innerHTML += getMenuSectionsTemplate(dishes[dishesIndex].category, dishes[dishesIndex].img);
             }
-        renderSectionMenu(dishes[dishesIndex].category, dishes[dishesIndex].name, dishes[dishesIndex].desc, dishes[dishesIndex].price, dishes[dishesIndex].img, dishesIndex);
+        renderSectionMenu(dishes[dishesIndex].category, dishes[dishesIndex].name, dishes[dishesIndex].desc, dishes[dishesIndex].price, dishes[dishesIndex].img, dishesIndex, dishes[dishesIndex].amount);
         
         }
 }
@@ -25,7 +25,11 @@ function renderBasket() {
     let basketSumRef = document.getElementById('basketSum');
     for (let dishesIndex = 0; dishesIndex < dishes.length; dishesIndex++) {
         if (dishes[dishesIndex].amount != 0) {
-            basketMenuListRef.innerHTML += getFilledBasketMenuListTemplate(dishes[dishesIndex].amount, dishes[dishesIndex].name, dishes[dishesIndex].price, dishesIndex);
+            let subtractIcon = "-";
+            if (dishes[dishesIndex].amount == 1) {
+                subtractIcon = '<img src="./assets/icons/trash.png" alt="icon delete menu element">';
+            }
+            basketMenuListRef.innerHTML += getFilledBasketMenuListTemplate(dishes[dishesIndex].amount, dishes[dishesIndex].name, dishes[dishesIndex].price, dishesIndex, subtractIcon);
             basketIsEmpty = false;
             sumPrice = Math.round((sumPrice + dishes[dishesIndex].amount * dishes[dishesIndex].price)*100)/100;
         }
@@ -73,4 +77,20 @@ function resetBasket() {
         dishes[dishesIndex].amount = 0;
     }
     renderBasket();
+}
+
+function changeButtonToAdded(dishesIndex) {
+    btnSectionMenuRef = document.getElementById('btnSectionMenu' + dishesIndex);
+    if (dishes[dishesIndex].amount != 0) {
+        btnSectionMenuRef.innerHTML = "Added" + " " + dishes[dishesIndex].amount;
+        btnSectionMenuRef.style.color = "#E76C1F";
+    } else {
+        changeButtonToNotAdded(dishesIndex);
+    }
+}
+
+function changeButtonToNotAdded(dishesIndex) {
+    btnSectionMenuRef = document.getElementById('btnSectionMenu' + dishesIndex);
+    btnSectionMenuRef.innerHTML = "Add to basket";
+    btnSectionMenuRef.style.color = "#363534";
 }

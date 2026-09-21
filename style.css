@@ -96,7 +96,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
 }
 
 .menuBasketContainer {
@@ -121,6 +121,12 @@ header {
     gap: 20px;
 }
 
+.basketText {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
 .basket img {
     width: 128px;
 }
@@ -136,6 +142,7 @@ header {
     display: flex;
     flex-direction: column;
     height: 355px;
+    width: 280px;
     overflow: scroll;
     gap: 10px;
 }
@@ -146,7 +153,7 @@ header {
     color: #363534;
     background-color: #FDEADC;
     border-radius: 20px;
-    padding: 20px;
+    padding: 5px 20px;
 }
 
 .basketMenuListElementDetails {
@@ -156,6 +163,8 @@ header {
 
 .basketMenuListElementControls {
     display: flex;
+    justify-content: right;
+    width: 62px;
 }
 
 .basketMenuListElementControls img {

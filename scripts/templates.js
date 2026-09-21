@@ -25,7 +25,7 @@ function getSectionMenuTemplate(name, desc, price, img, dishesIndex) {
                     </div>
                     <div class="menuDetailsRight">
                         <p>${price}€</p>
-                        <button onclick="addMenu(${dishesIndex})" class="btnDishes">Add to basket</button>
+                        <button id="btnSectionMenu${dishesIndex}" onclick="addMenu(${dishesIndex});changeButtonToAdded(${dishesIndex})" class="btnDishes">Add to basket</button>
                     </div>
                 </div>
             </div>
@@ -36,7 +36,7 @@ function getEmptyBasketTemplate() {
     return `
             <div class="basket">
                 <h3>Your Basket</h3>
-                <p>Nothing here yet. Go ahead and choose something delicious!</p>
+                <p class="basketText">Nothing here yet. Go ahead and choose something delicious!</p>
                 <img src="./assets/img/empty-basket-scetch.png" alt="basket scetch">
             </div>
             `
@@ -56,15 +56,15 @@ function getFilledBasketTemplate() {
             `
 }
 
-function getFilledBasketMenuListTemplate(amount, name, price, dishesIndex) {
+function getFilledBasketMenuListTemplate(amount, name, price, dishesIndex, subtractIcon) {
     return `
             <div class="basketMenuListElement">
                 <p>${amount}x ${name}</p>
                 <div class="basketMenuListElementDetails">
                     <div class="basketMenuListElementControls">
-                        <button onclick="subtractMenu(${dishesIndex})" class="btnBasketControls"><img src="./assets/icons/trash.png" alt="icon delete menu element"></button>
+                        <button onclick="subtractMenu(${dishesIndex});changeButtonToAdded(${dishesIndex})" class="btnBasketControls">${subtractIcon}</button>
                         <p>${amount}</p>
-                        <button onclick="addMenu(${dishesIndex})" class="btnBasketControls">+</button>
+                        <button onclick="addMenu(${dishesIndex});changeButtonToAdded(${dishesIndex})" class="btnBasketControls">+</button>
                     </div>
                     <p>${price}€</p>
                 </div>
