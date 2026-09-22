@@ -1,9 +1,9 @@
-function getMenuSectionsTemplate(category) {
+function getMenuSectionsTemplate(category, categoryName) {
     return `
             <section>
                     <div class="sectionOverview content">
                         <img src="assets/img/${category}.png" alt="${category} scetch">
-                        <h2>${category}</h2>
+                        <h2>${categoryName}</h2>
                     </div>
                     <div id="${category}" class="menuContainer content">
                         

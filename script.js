@@ -1,10 +1,12 @@
 function renderMenu() {
     let menuSectionsRef = document.getElementById('menuSections');
     let categorySelected = "";
+    let categoryName = "";
     for (let dishesIndex = 0; dishesIndex < dishes.length; dishesIndex++) {
         if (dishes[dishesIndex].category != categorySelected) {
             categorySelected = dishes[dishesIndex].category;
-            menuSectionsRef.innerHTML += getMenuSectionsTemplate(dishes[dishesIndex].category, dishes[dishesIndex].img);
+            categoryName = changeFirstLetterToUpperCase(dishes[dishesIndex].category);
+            menuSectionsRef.innerHTML += getMenuSectionsTemplate(dishes[dishesIndex].category, categoryName);
             }
         renderSectionMenu(dishes[dishesIndex].category, dishes[dishesIndex].name, dishes[dishesIndex].desc, dishes[dishesIndex].price, dishes[dishesIndex].img, dishesIndex, dishes[dishesIndex].amount);
         
@@ -13,13 +15,17 @@ function renderMenu() {
 
 function renderSectionMenu(category, name, desc, price, img, dishesIndex) {
     let sectionMenuRef = document.getElementById(category);
-    sectionMenuRef.innerHTML += getSectionMenuTemplate(name, desc, price, img, dishesIndex);
+    let priceString = roundFloatNumberIntoString(price, 2);
+    sectionMenuRef.innerHTML += getSectionMenuTemplate(name, desc, priceString, img, dishesIndex);
 }
 
 function renderBasket() {
     let basketRef = document.getElementById('basketContainer');
     let basketIsEmpty = true;
     let sumPrice = 0;
+    let totalPrice = 0;
+    let sumPriceString = "";
+    let totalPriceString = "";
     basketRef.innerHTML = getFilledBasketTemplate();
     let basketMenuListRef = document.getElementById('basketMenuList');
     let basketSumRef = document.getElementById('basketSum');
@@ -31,12 +37,14 @@ function renderBasket() {
             }
             basketMenuListRef.innerHTML += getFilledBasketMenuListTemplate(dishes[dishesIndex].amount, dishes[dishesIndex].name, dishes[dishesIndex].price, dishesIndex, subtractIcon);
             basketIsEmpty = false;
-            sumPrice = Math.round((sumPrice + dishes[dishesIndex].amount * dishes[dishesIndex].price)*100)/100;
+            sumPrice = (sumPrice + dishes[dishesIndex].amount * dishes[dishesIndex].price);
+            sumPriceString = roundFloatNumberIntoString(sumPrice, 2);
         }
     }
     if (basketIsEmpty === false) {
-        let totalPrice = Math.round((sumPrice + 4.99)*100)/100;
-        basketSumRef.innerHTML = getFilledBasketSumTemplate(sumPrice, totalPrice);
+        totalPrice = sumPrice + 4.99;
+        totalPriceString = roundFloatNumberIntoString(totalPrice, 2);
+        basketSumRef.innerHTML = getFilledBasketSumTemplate(sumPriceString, totalPriceString);
         
     } else {
         basketRef.innerHTML = getEmptyBasketTemplate();
@@ -75,6 +83,7 @@ function closeModal() {
 function resetBasket() {
     for (let dishesIndex = 0; dishesIndex < dishes.length; dishesIndex++) {
         dishes[dishesIndex].amount = 0;
+        changeButtonToNotAdded(dishesIndex);
     }
     renderBasket();
 }
