@@ -9,7 +9,21 @@ body {
 }
 
 h1 {
+    font-family: "PalanquinDark-Bold";
+    font-size: 48px;
+    color: #363534;
+}
+
+h2 {
     font-family: "PalanquinDark-Regular";
+    font-size: 40px;
+    color: #FFFFFF;
+}
+
+h3 {
+    font-family: "PalanquinDark-SemiBold";
+    font-size: 24px;
+    color: #363534;
 }
 
 header {
@@ -28,6 +42,12 @@ header {
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
+}
+
+.descCompany p {
+    font-family: "PalanquinDark-Bold";
+    font-size: 24px;
+    color: #363534;
 }
 
 .descHeroImg {
@@ -84,6 +104,12 @@ header {
     flex: 1;
 }
 
+.menuDetailsContainer p {
+    font-family: "Palanquin-Medium";
+    font-size: 16px;
+    color: #363534;
+}
+
 .menuDetailsLeft {
     display: flex;
     flex-direction: column;
@@ -121,7 +147,15 @@ header {
     gap: 20px;
 }
 
+.basket h3 {
+    font-family: "PalanquinDark-Bold";
+    font-size: 32px;
+    color: #FDEADC;
+}
+
 .basketText {
+    font-family: "Palanquin-Medium";
+    font-size: 24px;
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
@@ -175,6 +209,7 @@ header {
 .basketSum {
     display: flex;
     flex-direction: column;
+    width: 280px;
     gap: 5px;
 }
 
@@ -255,6 +290,21 @@ footer {
 }
 
 @font-face {
+  font-family: "Palanquin-Medium";
+  src: url("./assets/fonts/palanquin/Palanquin-Medium.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "PalanquinDark-Regular";
   src: url("./assets/fonts/palanquin_dark/PalanquinDark-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PalanquinDark-Bold";
+  src: url("./assets/fonts/palanquin_dark/PalanquinDark-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PalanquinDark-SemiBold";
+  src: url("./assets/fonts/palanquin_dark/PalanquinDark-SemiBold.ttf") format("truetype");
 }
