@@ -1,4 +1,7 @@
 .btnDishes {
+    font-family: "PalanquinDark-SemiBold";
+    font-size: 16px;
+    color: #363534;
     background-color: #FFFFFF;
     border-radius: 20px;
     border-color: transparent;
@@ -15,6 +18,10 @@
 }
 
 .bntBasket {
+    font-family: "Palanquin-Bold";
+    font-size: 32px;
+    line-height: 0;
+    color: #FDEADC;
     background-color: #E76C1F;
     height: 64px;
     border-radius: 60px;
@@ -25,6 +32,13 @@
     background-color: #FDEADC;
     border-radius: 20px;
     border-color: transparent;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Palanquin-Bold";
+    font-size: 22px;
+    color: #363534;
 }
 
 .textColorOrange {

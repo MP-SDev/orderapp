@@ -35,7 +35,8 @@ function renderBasket() {
             if (dishes[dishesIndex].amount == 1) {
                 subtractIcon = '<img src="./assets/icons/trash.png" alt="icon delete menu element">';
             }
-            basketMenuListRef.innerHTML += getFilledBasketMenuListTemplate(dishes[dishesIndex].amount, dishes[dishesIndex].name, dishes[dishesIndex].price, dishesIndex, subtractIcon);
+            let priceString = roundFloatNumberIntoString(dishes[dishesIndex].price, 2);
+            basketMenuListRef.innerHTML += getFilledBasketMenuListTemplate(dishes[dishesIndex].amount, dishes[dishesIndex].name, priceString, dishesIndex, subtractIcon);
             basketIsEmpty = false;
             sumPrice = (sumPrice + dishes[dishesIndex].amount * dishes[dishesIndex].price);
             sumPriceString = roundFloatNumberIntoString(sumPrice, 2);
