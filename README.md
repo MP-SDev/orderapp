@@ -1,0 +1,1 @@
+Welcome to the fictional online presence of BurgerHouse! This page is part of a DA project showcasing the front end of an ordering app. You can fill the sticky shopping basket with your chosen dishes, but unfortunately, despite the confirmation message, you won’t have any delicious food delivered 
