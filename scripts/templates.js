@@ -5,6 +5,8 @@ function getMenuSectionsTemplate(category, categoryName) {
                         <img src="assets/img/${category}.png" alt="${category} scetch">
                         <h2>${categoryName}</h2>
                     </div>
+                    <div class="sectionOverviewBackground">
+                    </div>
                     <div id="${category}" class="menuContainer content">
                         
                     </div>
