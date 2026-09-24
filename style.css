@@ -86,6 +86,7 @@ header {
     margin-top: -76px;
     margin-left: calc(50% - 50vw + 217.5px);
     background-color: #E76C1F;
+    margin-bottom: 16px;
 }
 
 .menuContainer {
