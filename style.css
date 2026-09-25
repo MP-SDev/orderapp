@@ -84,7 +84,7 @@ header {
     height: 60px;
     width: 100dvw;
     margin-top: -76px;
-    margin-left: calc(50% - 50vw + 217.5px);
+    margin-left: calc(50% - 50vw + 232.5px);
     background-color: #E76C1F;
     margin-bottom: 16px;
 }
@@ -94,16 +94,17 @@ header {
     flex-direction: column;
     gap: 16px;
     flex: 1;
+    min-width: 0;
     margin-bottom: 30px;
+    padding-right: 30px;
 }
 
 .menu {
     background-color: #FDEADC;
-    height: 141px;
-    width: 50dvw;
     border-radius: 12px;
     padding: 10px;
     display: flex;
+    align-items: center;
 }
 
 .menuImg img {
@@ -147,7 +148,7 @@ header {
 
 .menuBasketContainer {
     display: flex;
-    width: 100dvw;
+    width: 100%;
 }
 
 .basket {

@@ -1,13 +1,13 @@
 function getMenuSectionsTemplate(category, categoryName) {
     return `
             <section>
-                    <div class="sectionOverview content">
+                    <div class="sectionOverview">
                         <img src="assets/img/${category}.png" alt="${category} scetch">
                         <h2>${categoryName}</h2>
                     </div>
                     <div class="sectionOverviewBackground">
                     </div>
-                    <div id="${category}" class="menuContainer content">
+                    <div id="${category}" class="menuContainer">
                         
                     </div>
                 </section>
