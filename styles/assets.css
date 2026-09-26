@@ -44,3 +44,15 @@
 .textColorOrange {
     color: #E76C1F;
 }
+
+.TextPalanquinDark {
+    font-family: "PalanquinDark-Regular" !important;
+    font-size: 20px !important;
+}
+
+@media (max-width: 950px){
+    .bntBasket {
+        font-size: 22px;
+        padding: 13px 45px;
+    }
+}

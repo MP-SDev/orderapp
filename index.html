@@ -16,7 +16,7 @@
     <header>
         <div class="headerContainer content">
             <img src="./assets/img/Logo_02.png" alt="logo burgerhouse">
-            <img src="./assets/img/menu.png" alt="logo nav bar">
+            <img class="headerLogoNavbar" src="./assets/img/menu.png" alt="logo nav bar">
         </div>
     </header>
     <main>
@@ -49,11 +49,18 @@
                 <p>Your food is on the way!</p>
             </div>
         </div>
+        <div class="navBar">
+            <img onclick="hideBasketMobileView()" src="./assets/icons/home.png" alt="icon home">
+            <img src="./assets/icons/person.png" alt="icon person">
+            <img src="./assets/icons/takeout.png" alt="icon takeout">
+            <img onclick="showBasketMobileView()" src="./assets/icons/basket.png" alt="icon basket">
+        </div>
     </main>
     <footer>
         <div class="footerContainer">
             <div class="footerCopyright">
                 <img src="./assets/icons/copyright.png" alt="icon copyright">
+                <p>2025</p>
                 <p>BurgerHouse</p>
             </div>
             <p>Imprint</p>

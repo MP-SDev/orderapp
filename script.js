@@ -78,7 +78,7 @@ function placeOrder() {
 
 function closeModal() {
     let orderConfirmationModalRef = document.getElementById('orderConfirmationModal');
-    orderConfirmationModalRef.style.display = "none"
+    orderConfirmationModalRef.style.display = "none";
 }
 
 function resetBasket() {
@@ -103,4 +103,14 @@ function changeButtonToNotAdded(dishesIndex) {
     btnSectionMenuRef = document.getElementById('btnSectionMenu' + dishesIndex);
     btnSectionMenuRef.innerHTML = "Add to basket";
     btnSectionMenuRef.style.color = "#363534";
+}
+
+function showBasketMobileView() {
+    let basketContainerRef = document.getElementById('basketContainer');
+    basketContainerRef.style.display = "flex";
+}
+
+function hideBasketMobileView() {
+    let basketContainerRef = document.getElementById('basketContainer');
+    basketContainerRef.style.display = "none";
 }

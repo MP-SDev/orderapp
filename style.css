@@ -93,11 +93,6 @@ header {
     font-size: 18px;
 }
 
-.TextPalanquinDark {
-    font-family: "PalanquinDark-Regular" !important;
-    font-size: 20px !important;
-}
-
 .sectionOverview {
     height: 60px;
     color: #FFFFFF;
@@ -331,6 +326,23 @@ header {
     cursor: pointer;
 }
 
+.navBar {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #363534;
+    height: 78px;
+    width: 100%;
+    padding: 24px 25px;
+    position: fixed;
+    bottom: 0;
+}
+
+.navBar img {
+    height: 24px;
+    width: 24px;
+}
+
 footer {
     background-color: #E76C1F;
     color: #FFFFFF;
@@ -348,11 +360,129 @@ footer {
 
 .footerCopyright {
     display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .footerCopyright img {
     height: 20px;
     width: 20px;
+}
+
+@media (max-width: 1320px){
+    h3 {
+        font-size: 20px;
+    }
+
+    .menuImg img {
+        width: 150px;
+    }
+}
+
+@media (max-width: 1230px){
+    .menuContainer {
+        padding-right: 10px;
+    }
+
+    .content {
+        padding: 0 60px;
+    }
+
+    .sectionOverviewBackground {
+        margin-left: calc(50% - 50vw + 222.5px);
+    }
+}
+
+@media (max-width: 1080px){
+    .menu {
+        flex-direction: column;
+        align-items: initial;
+    }
+
+    .menuImg {
+        width: 100%;
+    }
+
+    .menuImg img {
+        width: 100%;
+        height: 86px;
+    }
+}
+
+@media (max-width: 950px){
+    .basket {
+        width: 343px;
+        height: 662px;
+        padding: 10px 0;
+    }
+
+    .basketMenuList {
+        width: 300px;
+        height: 330px;
+    }
+
+    .basketMenuListElement {
+        font-size: 20px;
+    }
+
+    .basketSum {
+        width: 300px;
+    }
+
+    .sectionOverviewBackground {
+        margin-left: calc(50% - 50vw + 176.5px);;
+    }
+}
+
+@media (max-width: 860px){
+    .menuDetailsContainer {
+        flex-direction: column;
+    }
+
+    .menuDetailsRight {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 800px){
+    .basketContainer {
+        display: flex;
+    }
+}
+
+@media (max-width: 800px){
+    .navBar {
+        display: flex;
+    }
+
+    .headerLogoNavbar {
+        display: none;
+    }
+    
+    .sectionOverviewBackground {
+        margin-left: calc(50% - 50vw + 5px);
+    }
+
+    .basketContainer {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        align-items: flex-start;
+        background-color: #363534af;
+    }
+
+    .basket {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        margin: auto;
+    }
+
+    footer {
+        margin-bottom: 78px;
+    }
 }
 
 @font-face {
