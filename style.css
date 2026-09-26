@@ -67,6 +67,37 @@ header {
     margin-top: -100px;
 }
 
+.headline {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 26px;
+}
+
+.headlineRanking {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #FACAAC;
+    gap: 8px;
+    padding: 4px 5px;
+    border-radius: 4px;
+}
+
+.headlineRanking img {
+    width: 24px;
+}
+
+.headlineRanking p {
+    font-family: "Palanquin-Regular";
+    font-size: 18px;
+}
+
+.TextPalanquinDark {
+    font-family: "PalanquinDark-Regular" !important;
+    font-size: 20px !important;
+}
+
 .sectionOverview {
     height: 60px;
     color: #FFFFFF;
@@ -263,8 +294,7 @@ header {
 .orderConfirmationModalContent {
     background-color: #363534;
     color: #FDEADC;
-    width: 415px;
-    height: 269px;
+    width: 500px;
     border-radius: 30px;
     margin: 22% auto;
     display: flex;
