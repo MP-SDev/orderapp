@@ -541,6 +541,12 @@ footer {
     }
 }
 
+@media (max-width: 500px){
+    .content {
+        padding: 0 30px;
+    }
+}
+
 @font-face {
   font-family: "Palanquin-Regular";
   src: url("./assets/fonts/palanquin/Palanquin-Regular.ttf") format("truetype");
