@@ -50,6 +50,7 @@ function renderBasket() {
     } else {
         basketRef.innerHTML = getEmptyBasketTemplate();
     }
+    updateBasketIconBadge();
 }
 
 function addMenu(dishesIndex) {
@@ -113,4 +114,13 @@ function showBasketMobileView() {
 function hideBasketMobileView() {
     let basketContainerRef = document.getElementById('basketContainer');
     basketContainerRef.style.display = "none";
+}
+
+function updateBasketIconBadge(){
+    let basketIconBadgeRef = document.getElementById('basketIconBadge');
+    let amountSelectedDishes = 0;
+    for (let dishesIndex = 0; dishesIndex < dishes.length; dishesIndex++) {
+        amountSelectedDishes += dishes[dishesIndex].amount;        
+    }
+    basketIconBadgeRef.innerHTML = amountSelectedDishes;
 }

@@ -48,6 +48,7 @@ header {
     font-family: "Palanquin-Bold";
     font-size: 24px;
     color: #363534;
+    text-align: center;
 }
 
 .descHeroImg {
@@ -343,6 +344,18 @@ header {
     width: 24px;
 }
 
+.basketIconBadge {
+    position: relative;
+    top: -20px;
+    left: -4px;
+    height: 15px;
+    width: 15px;
+    border-radius: 999px;
+    background: #FFFFFF; 
+    color: #E76C1F;
+    padding: 3px;
+}
+
 footer {
     background-color: #E76C1F;
     color: #FFFFFF;
@@ -482,6 +495,49 @@ footer {
 
     footer {
         margin-bottom: 78px;
+    }
+}
+
+@media (max-width: 600px){
+    .headline {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        padding-top: 30px;
+    }
+
+    .descCompany p {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .sectionOverview {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 32px;
+    }
+
+    .sectionOverview img {
+        height: 60px;
+        margin-right: 0;
+        margin-bottom: -20px;
+    }
+
+    footer {
+        height: 174px;
+    }
+
+    .footerContainer {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding-top: 32px;
     }
 }
 
