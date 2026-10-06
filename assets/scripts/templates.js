@@ -27,7 +27,7 @@ function getSectionMenuTemplate(name, desc, price, img, dishesIndex) {
                     </div>
                     <div class="menuDetailsRight">
                         <p>${price}€</p>
-                        <button id="btnSectionMenu${dishesIndex}" onclick="addMenu(${dishesIndex});changeButtonToAdded(${dishesIndex})" class="btnDishes" aria-controls="basketContainer">Add to basket</button>
+                        <button id="btnSectionMenu${dishesIndex}" onclick="addMenu(${dishesIndex});changeButtonToAdded(${dishesIndex})" class="btnDishes">Add to basket</button>
                     </div>
                 </div>
             </div>
@@ -64,9 +64,9 @@ function getFilledBasketMenuListTemplate(amount, name, price, dishesIndex, subtr
                 <p>${amount}x ${name}</p>
                 <div class="basketMenuListElementDetails">
                     <div class="basketMenuListElementControls">
-                        <button onclick="subtractMenu(${dishesIndex});changeButtonToAdded(${dishesIndex})" class="btnBasketControls" aria-label="subtract menu" aria-controls="basketContainer">${subtractIcon}</button>
+                        <button onclick="subtractMenu(${dishesIndex});changeButtonToAdded(${dishesIndex})" class="btnBasketControls">${subtractIcon}</button>
                         <p>${amount}</p>
-                        <button onclick="addMenu(${dishesIndex});changeButtonToAdded(${dishesIndex})" class="btnBasketControls" aria-label="add Menu" aria-controls="basketContainer">+</button>
+                        <button onclick="addMenu(${dishesIndex});changeButtonToAdded(${dishesIndex})" class="btnBasketControls">+</button>
                     </div>
                     <p>${price}€</p>
                 </div>
@@ -89,6 +89,6 @@ function getFilledBasketSumTemplate(sumPrice, totalPrice) {
                 <p>Total</p>
                 <p>${totalPrice}€</p>
             </div>
-            <button onclick="placeOrder()" class="bntBasket" aria-controls="orderConfirmationModal">Buy now (${totalPrice}€)</button>
+            <button onclick="placeOrder()" class="bntBasket">Buy now (${totalPrice}€)</button>
             `
 }
