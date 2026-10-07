@@ -225,8 +225,18 @@ header {
     flex-direction: column;
     height: 455px;
     width: 380px;
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
     gap: 10px;
+}
+
+.basketMenuList::-webkit-scrollbar {
+  width: 10px;
+}
+
+.basketMenuList::-webkit-scrollbar-thumb {
+  background: gray; 
+  border-radius: 10px;
 }
 
 .basketMenuListElement {
