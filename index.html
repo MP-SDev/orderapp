@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./styles/assets.css">
     <link rel="stylesheet" href="./styles/standard.css">
-    <link rel="shortcut icon" href="./assets/icons/filledbasket.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/icons/selectedbasket.png" type="image/x-icon">
     <script src="./scripts/standard.js"></script>
     <script src="./scripts/db.js"></script>
     <script src="./scripts/templates.js"></script>
@@ -51,10 +51,10 @@
             </div>
         </div>
         <div class="navBar">
-            <button class="btnNavBar" onclick="hideBasketMobileView()" aria-controls="basketContainer"><img src="./assets/icons/home.png" alt="icon home"></button>
+            <button class="btnNavBar" onclick="hideBasketMobileView()" aria-controls="basketContainer"><img id="navBarHomeIconImg" src="./assets/icons/selectedhome.png" alt="icon home"></button>
             <button class="btnNavBar"><img src="./assets/icons/person.png" alt="icon person"></button>
             <button class="btnNavBar"><img src="./assets/icons/takeout.png" alt="icon takeout"></button>
-            <button class="btnNavBar" id="navBarBasketIcon" onclick="showBasketMobileView()" aria-controls="basketContainer"><img src="./assets/icons/filledbasket.png" alt="icon basket"><span id="basketIconBadge" class="basketIconBadge"></span></button>
+            <button class="btnNavBar" id="navBarBasketIcon" onclick="showBasketMobileView()" aria-controls="basketContainer"><img id="navBarBasketIconImg" src="./assets/icons/basket.png" alt="icon basket"><span id="basketIconBadge" class="basketIconBadge"></span></button>
         </div>
     </main>
     <footer>

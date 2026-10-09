@@ -108,12 +108,21 @@ function changeButtonToNotAdded(dishesIndex) {
 
 function showBasketMobileView() {
     let basketContainerRef = document.getElementById('basketContainer');
+    let navBarHomeIconImgRef = document.getElementById('navBarHomeIconImg');
+    let navBarBasketIconImgRef = document.getElementById('navBarBasketIconImg');
     basketContainerRef.style.display = "flex";
+    navBarHomeIconImgRef.src = './assets/icons/home.png';
+    navBarBasketIconImgRef.src = './assets/icons/selectedbasket.png';
+
 }
 
 function hideBasketMobileView() {
     let basketContainerRef = document.getElementById('basketContainer');
+    let navBarHomeIconImgRef = document.getElementById('navBarHomeIconImg');
+    let navBarBasketIconImgRef = document.getElementById('navBarBasketIconImg');
     basketContainerRef.style.display = "none";
+    navBarHomeIconImgRef.src = './assets/icons/selectedhome.png';
+    navBarBasketIconImgRef.src = './assets/icons/basket.png';
 }
 
 function updateBasketIconBadge(){
