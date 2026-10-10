@@ -1,1 +1,3 @@
 Welcome to the fictional online presence of BurgerHouse! This page is part of a DA project showcasing the front end of an ordering app. You can fill the sticky shopping basket with your chosen dishes, but unfortunately, despite the confirmation message, you won’t have any delicious food delivered 
+
+Willkommen auf der fiktiven Website von BurgerHouse! Diese Seite ist Teil eines DA-Projekts, das das Frontend einer Bestell-App präsentiert. Du kannst den feststehenden Warenkorb mit den Gerichten deiner Wahl füllen, aber leider wirst du – trotz der Bestätigungsmeldung – kein leckeres Essen geliefert bekommen.
