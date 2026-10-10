@@ -37,6 +37,7 @@ function getSectionMenuTemplate(name, desc, price, img, dishesIndex) {
 function getEmptyBasketTemplate() {
     return `
             <div class="basket">
+                <span onclick="hideBasketMobileView()" class="closeBasket" aria-label="close" aria-controls="basketContainer">&times;</span>
                 <h3>Your Basket</h3>
                 <p class="basketText">Nothing here yet. Go ahead and choose something delicious!</p>
                 <img src="./assets/img/empty-basket-scetch.png" alt="basket scetch">
@@ -47,6 +48,7 @@ function getEmptyBasketTemplate() {
 function getFilledBasketTemplate() {
     return `
              <div class="basket">
+                <span onclick="hideBasketMobileView()" class="closeBasket" aria-label="close" aria-controls="basketContainer">&times;</span>
                 <h3>Your Basket</h3>
                 <div id="basketMenuList" class="basketMenuList">
                     

@@ -66,6 +66,9 @@ function subtractMenu(dishesIndex) {
 function placeOrder() {
     let orderConfirmationModalRef = document.getElementById('orderConfirmationModal');
     resetBasket();
+    if (window.matchMedia("(max-width: 800px)").matches) {
+        hideBasketMobileView();
+    }
     orderConfirmationModalRef.style.display = "flex";
     setTimeout(function(){
         orderConfirmationModalRef.style.display = "none"
@@ -110,6 +113,7 @@ function showBasketMobileView() {
     let basketContainerRef = document.getElementById('basketContainer');
     let navBarHomeIconImgRef = document.getElementById('navBarHomeIconImg');
     let navBarBasketIconImgRef = document.getElementById('navBarBasketIconImg');
+    document.documentElement.style.overflowY = 'hidden';
     basketContainerRef.style.display = "flex";
     navBarHomeIconImgRef.src = './assets/icons/home.png';
     navBarBasketIconImgRef.src = './assets/icons/selectedbasket.png';
@@ -120,6 +124,7 @@ function hideBasketMobileView() {
     let basketContainerRef = document.getElementById('basketContainer');
     let navBarHomeIconImgRef = document.getElementById('navBarHomeIconImg');
     let navBarBasketIconImgRef = document.getElementById('navBarBasketIconImg');
+    document.documentElement.style.overflowY = '';
     basketContainerRef.style.display = "none";
     navBarHomeIconImgRef.src = './assets/icons/selectedhome.png';
     navBarBasketIconImgRef.src = './assets/icons/basket.png';

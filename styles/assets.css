@@ -11,10 +11,15 @@
 .btnDishes:hover {
     box-shadow: 1px 2px #00000033;
     color: #E76C1F;
+    cursor: pointer;
 }
 
 .btnDishesSelected {
     color: #E76C1F;
+}
+
+.btnDishesSelected:hover {
+    cursor: pointer;
 }
 
 .bntBasket {
@@ -26,6 +31,10 @@
     height: 64px;
     border-radius: 60px;
     padding: 13px 55px;
+}
+
+.bntBasket:hover {
+    cursor: pointer;
 }
 
 .btnBasketControls {
@@ -41,6 +50,10 @@
     color: #363534;
 }
 
+.btnBasketControls:hover {
+    cursor: pointer;
+}
+
 .textColorOrange {
     color: #E76C1F;
 }
@@ -53,6 +66,10 @@
 .btnNavBar {
     background-color: transparent;
     border: transparent;
+}
+
+.btnNavBar:hover {
+    cursor: pointer;
 }
 
 @media (max-width: 950px){

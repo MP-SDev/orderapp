@@ -202,6 +202,18 @@ main {
     gap: 20px;
 }
 
+.closeBasket {
+    display: none;
+    justify-content: flex-end;
+    width: 100%;
+    font-family: "Palanquin-Bold";
+    font-size: 29px;
+}
+
+.closeBasket:hover {
+    cursor: pointer;
+}
+
 .basket h3 {
     font-family: "Palanquin-Bold";
     font-size: 32px;
@@ -225,6 +237,7 @@ main {
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    overscroll-behavior: contain;
 }
 
 .basketMenuList {
@@ -235,6 +248,7 @@ main {
     overflow-x: hidden;
     overflow-y: scroll;
     gap: 10px;
+    overscroll-behavior: contain;
 }
 
 .basketMenuList::-webkit-scrollbar {
@@ -489,6 +503,10 @@ footer {
     .headerLogoNavbar {
         display: none;
     }
+
+    .closeBasket {
+        display: flex;
+    }
     
     .sectionOverviewBackground {
         margin-left: calc(50% - 50vw + 5px);
@@ -568,6 +586,24 @@ footer {
 @media (max-width: 350px){
     .basket {
         width: 320px;
+    }
+}
+
+@media (max-height: 820px){
+    .basketMenuList {
+        height: 250px;
+    }
+}
+
+@media (max-height: 760px){
+    .basketMenuList {
+        height: 200px;
+    }
+}
+
+@media (max-height: 670px){
+    .basketMenuList {
+        height: 150px;
     }
 }
 
