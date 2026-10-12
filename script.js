@@ -1,3 +1,8 @@
+function init() {
+    renderMenu(); 
+    renderBasket();
+}
+
 function renderMenu() {
     let menuSectionsRef = document.getElementById('menuSections');
     let categorySelected = "";
