@@ -63,7 +63,10 @@ function getFilledBasketTemplate() {
 function getFilledBasketMenuListTemplate(amount, name, price, dishesIndex, subtractIcon) {
     return `
             <div class="basketMenuListElement">
-                <p>${amount}x ${name}</p>
+                <div class="basketMenuListElementDesc">
+                    <p>${amount}x ${name}</p>
+                    <button onclick="deleteMenu(${dishesIndex});changeButtonToAdded(${dishesIndex})" id="basketDeleteBtn${dishesIndex}" class="btnBasketControls" aria-label="delete menu" aria-controls="basketContainer"><img src="./assets/icons/trash.png"></button>
+                </div>
                 <div class="basketMenuListElementDetails">
                     <div class="basketMenuListElementControls">
                         <button onclick="subtractMenu(${dishesIndex});changeButtonToAdded(${dishesIndex})" class="btnBasketControls" aria-label="subtract menu" aria-controls="basketContainer">${subtractIcon}</button>

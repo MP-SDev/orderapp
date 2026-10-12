@@ -276,6 +276,16 @@ main {
     padding: 5px 20px;
 }
 
+.basketMenuListElementDesc {
+    display: flex;
+    justify-content: space-between;
+}
+
+.basketMenuListElementDesc img {
+    height: 24px;
+    width: 24px;
+}
+
 .basketMenuListElementDetails {
     display: flex;
     justify-content: space-between;

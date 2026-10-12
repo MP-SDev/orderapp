@@ -42,6 +42,9 @@ function renderBasket() {
             }
             let priceString = roundFloatNumberIntoString(dishes[dishesIndex].price, 2);
             basketMenuListRef.innerHTML += getFilledBasketMenuListTemplate(dishes[dishesIndex].amount, dishes[dishesIndex].name, priceString, dishesIndex, subtractIcon);
+            if (dishes[dishesIndex].amount == 1) {
+                hideBasketDeleteBtn(true, dishesIndex);
+            }
             basketIsEmpty = false;
             sumPrice = (sumPrice + dishes[dishesIndex].amount * dishes[dishesIndex].price);
             sumPriceString = roundFloatNumberIntoString(sumPrice, 2);
@@ -66,6 +69,22 @@ function addMenu(dishesIndex) {
 function subtractMenu(dishesIndex) {
     dishes[dishesIndex].amount = dishes[dishesIndex].amount - 1;
     renderBasket();
+}
+
+function deleteMenu(dishesIndex) {
+    dishes[dishesIndex].amount = 0;
+    renderBasket();
+}
+
+function hideBasketDeleteBtn(hide, dishesIndex) {
+    let basketDeleteBtnRef = document.getElementById('basketDeleteBtn'+dishesIndex);
+    if (hide === true) {
+        basketDeleteBtnRef.classList.add("hide");
+    }
+    if (hide === false) {
+        basketDeleteBtnRef.classList.remove("hide");
+    }
+    
 }
 
 function placeOrder() {
