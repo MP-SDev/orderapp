@@ -3,6 +3,11 @@
     max-width: 1440px;
     padding: 0 120px;
 }
+.contentMenu {
+    margin: auto;
+    max-width: 1440px;
+    padding: 0 120px;
+}
 
 body {
     font-family: "Palanquin-Regular";
@@ -414,6 +419,16 @@ footer {
     width: 20px;
 }
 
+@media (max-width: 1440px){
+    .contentMenu {
+        padding-right: 0;
+    }
+
+    .sectionOverviewBackground {
+        margin-left: calc(50% - 50vw + 172px);
+    }
+}
+
 @media (max-width: 1320px){
     h3 {
         font-size: 20px;
@@ -433,8 +448,12 @@ footer {
         padding: 0 60px;
     }
 
+    .contentMenu {
+        padding-left: 60px;
+    }
+
     .sectionOverviewBackground {
-        margin-left: calc(50% - 50vw + 222.5px);
+        margin-left: calc(50% - 50vw + 192px);
     }
 }
 
@@ -475,7 +494,7 @@ footer {
     }
 
     .sectionOverviewBackground {
-        margin-left: calc(50% - 50vw + 176.5px);;
+        margin-left: calc(50% - 50vw + 145px);;
     }
 }
 
@@ -509,7 +528,7 @@ footer {
     }
     
     .sectionOverviewBackground {
-        margin-left: calc(50% - 50vw + 5px);
+        margin-left: calc(50% - 50vw);
     }
 
     .basketContainer {
@@ -531,6 +550,18 @@ footer {
 
     footer {
         margin-bottom: 78px;
+    }
+
+    .content {
+        padding: 0 30px;
+    }
+
+    .contentMenu {
+        padding: 0 30px;
+    }
+
+    .menuContainer {
+        padding-right: 0;
     }
 }
 
@@ -574,12 +605,6 @@ footer {
         align-items: center;
         gap: 10px;
         padding-top: 32px;
-    }
-}
-
-@media (max-width: 500px){
-    .content {
-        padding: 0 30px;
     }
 }
 
