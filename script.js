@@ -14,7 +14,6 @@ function renderMenu() {
             menuSectionsRef.innerHTML += getMenuSectionsTemplate(dishes[dishesIndex].category, categoryName);
             }
         renderSectionMenu(dishes[dishesIndex].category, dishes[dishesIndex].name, dishes[dishesIndex].desc, dishes[dishesIndex].price, dishes[dishesIndex].img, dishesIndex, dishes[dishesIndex].amount);
-        
         }
 }
 
@@ -26,39 +25,62 @@ function renderSectionMenu(category, name, desc, price, img, dishesIndex) {
 
 function renderBasket() {
     let basketRef = document.getElementById('basketContainer');
-    let basketIsEmpty = true;
-    let sumPrice = 0;
     let totalPrice = 0;
     let sumPriceString = "";
     let totalPriceString = "";
     basketRef.innerHTML = getFilledBasketTemplate();
     let basketMenuListRef = document.getElementById('basketMenuList');
     let basketSumRef = document.getElementById('basketSum');
+    if (basketIsEmpty()) {
+        basketRef.innerHTML = getEmptyBasketTemplate();
+    } else {
+        let sumPrice = renderAllDishesInBasket(basketMenuListRef);
+        renderBasketSum(basketSumRef, sumPrice);
+    }
+    updateBasketIconBadge();
+}
+
+function renderAllDishesInBasket(basketMenuListRef) {
+    let sumPrice = 0;
     for (let dishesIndex = 0; dishesIndex < dishes.length; dishesIndex++) {
         if (dishes[dishesIndex].amount != 0) {
-            let subtractIcon = "-";
-            if (dishes[dishesIndex].amount == 1) {
-                subtractIcon = '<img src="./assets/icons/trash.png" alt="icon delete menu element">';
-            }
+            let subtractIcon = selectSubtractIcon(dishesIndex);
             let priceString = roundFloatNumberIntoString(dishes[dishesIndex].price, 2);
             basketMenuListRef.innerHTML += getFilledBasketMenuListTemplate(dishes[dishesIndex].amount, dishes[dishesIndex].name, priceString, dishesIndex, subtractIcon);
             if (dishes[dishesIndex].amount == 1) {
                 hideBasketDeleteBtn(true, dishesIndex);
             }
-            basketIsEmpty = false;
             sumPrice = (sumPrice + dishes[dishesIndex].amount * dishes[dishesIndex].price);
-            sumPriceString = roundFloatNumberIntoString(sumPrice, 2);
         }
     }
-    if (basketIsEmpty === false) {
-        totalPrice = sumPrice + 4.99;
-        totalPriceString = roundFloatNumberIntoString(totalPrice, 2);
-        basketSumRef.innerHTML = getFilledBasketSumTemplate(sumPriceString, totalPriceString);
-        
-    } else {
-        basketRef.innerHTML = getEmptyBasketTemplate();
+    return sumPrice;
+}
+
+function renderBasketSum(basketSumRef, sumPrice) {
+    sumPriceString = roundFloatNumberIntoString(sumPrice, 2);
+    totalPriceString = calculateTotalPrice(sumPrice);
+    basketSumRef.innerHTML = getFilledBasketSumTemplate(sumPriceString, totalPriceString);
+}
+
+function basketIsEmpty() {
+    for (let dishesIndex = 0; dishesIndex < dishes.length; dishesIndex++) {
+        if (dishes[dishesIndex].amount != 0) return false;
     }
-    updateBasketIconBadge();
+    return true;
+}
+
+function selectSubtractIcon(dishesIndex) {
+    let subtractIcon = "-";
+    if (dishes[dishesIndex].amount == 1) {
+        subtractIcon = '<img src="./assets/icons/trash.png" alt="icon delete menu element">';
+    }
+    return subtractIcon;
+}
+
+function calculateTotalPrice(sumPrice) {
+    totalPrice = sumPrice + 4.99;
+    totalPriceString = roundFloatNumberIntoString(totalPrice, 2);
+    return totalPriceString;
 }
 
 function addMenu(dishesIndex) {
