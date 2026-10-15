@@ -429,13 +429,16 @@ footer {
     width: 20px;
 }
 
-@media (max-width: 1440px){
-    .contentMenu {
-        padding-right: 0;
-    }
+@media (max-width: 1455px){
 
     .sectionOverviewBackground {
         margin-left: -120px;
+    }
+}
+
+@media (max-width: 1440px){
+    .contentMenu {
+        padding-right: 0;
     }
 }
 
