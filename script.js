@@ -83,13 +83,8 @@ function calculateTotalPrice(sumPrice) {
     return totalPriceString;
 }
 
-function addMenu(dishesIndex) {
-    dishes[dishesIndex].amount = dishes[dishesIndex].amount + 1;
-    renderBasket();
-}
-
-function subtractMenu(dishesIndex) {
-    dishes[dishesIndex].amount = dishes[dishesIndex].amount - 1;
+function addMenu(dishesIndex, value) {
+    dishes[dishesIndex].amount = dishes[dishesIndex].amount + value;
     renderBasket();
 }
 

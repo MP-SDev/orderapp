@@ -27,7 +27,7 @@ function getSectionMenuTemplate(name, desc, price, img, dishesIndex) {
                     </div>
                     <div class="menuDetailsRight">
                         <p>${price}€</p>
-                        <button id="btnSectionMenu${dishesIndex}" onclick="addMenu(${dishesIndex});changeButtonToAdded(${dishesIndex})" class="btnDishes" aria-controls="basketContainer">Add to basket</button>
+                        <button id="btnSectionMenu${dishesIndex}" onclick="addMenu(${dishesIndex},1);changeButtonToAdded(${dishesIndex})" class="btnDishes" aria-controls="basketContainer">Add to basket</button>
                     </div>
                 </div>
             </div>
@@ -69,9 +69,9 @@ function getFilledBasketMenuListTemplate(amount, name, price, dishesIndex, subtr
                 </div>
                 <div class="basketMenuListElementDetails">
                     <div class="basketMenuListElementControls">
-                        <button onclick="subtractMenu(${dishesIndex});changeButtonToAdded(${dishesIndex})" class="btnBasketControls" aria-label="subtract menu" aria-controls="basketContainer">${subtractIcon}</button>
+                        <button onclick="addMenu(${dishesIndex},-1); changeButtonToAdded(${dishesIndex})" class="btnBasketControls" aria-label="subtract menu" aria-controls="basketContainer">${subtractIcon}</button>
                         <p>${amount}</p>
-                        <button onclick="addMenu(${dishesIndex});changeButtonToAdded(${dishesIndex})" class="btnBasketControls" aria-label="add Menu" aria-controls="basketContainer">+</button>
+                        <button onclick="addMenu(${dishesIndex},1); changeButtonToAdded(${dishesIndex})" class="btnBasketControls" aria-label="add Menu" aria-controls="basketContainer">+</button>
                     </div>
                     <p>${price}€</p>
                 </div>
