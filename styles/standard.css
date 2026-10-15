@@ -4,8 +4,16 @@
 }
 
 html {
-    overflow-x: clip;
     scrollbar-gutter: stable;
+}
+
+* ::-webkit-scrollbar {
+  width: 15px;
+}
+
+* ::-webkit-scrollbar-thumb {
+  background: gray; 
+  border-radius: 10px;
 }
 
 body, h1, h2, h3, p {

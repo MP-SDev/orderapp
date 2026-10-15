@@ -123,7 +123,7 @@ main {
     height: 60px;
     width: 100dvw;
     margin-top: -76px;
-    margin-left: calc(50% - 50vw + 232.5px);
+    margin-left: calc((1440px - 100vw) / 2 - 120px);
     background-color: #E76C1F;
     margin-bottom: 16px;
 }
@@ -435,7 +435,7 @@ footer {
     }
 
     .sectionOverviewBackground {
-        margin-left: calc(50% - 50vw + 172px);
+        margin-left: -120px;
     }
 }
 
@@ -463,7 +463,7 @@ footer {
     }
 
     .sectionOverviewBackground {
-        margin-left: calc(50% - 50vw + 192px);
+        margin-left: -60px;
     }
 }
 
@@ -502,10 +502,6 @@ footer {
     .basketSum {
         width: 300px;
     }
-
-    .sectionOverviewBackground {
-        margin-left: calc(50% - 50vw + 145px);;
-    }
 }
 
 @media (max-width: 860px){
@@ -536,10 +532,6 @@ footer {
     .closeBasket {
         display: flex;
     }
-    
-    .sectionOverviewBackground {
-        margin-left: calc(50% - 50vw);
-    }
 
     .basketContainer {
         display: none;
@@ -564,6 +556,10 @@ footer {
 
     .content {
         padding: 0 30px;
+    }
+
+    .sectionOverviewBackground {
+        margin-left: -30px;
     }
 
     .contentMenu {
