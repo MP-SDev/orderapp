@@ -576,6 +576,16 @@ footer {
     }
 }
 
+@media (max-width: 650px){
+    .orderConfirmationModalContent h3 {
+        font-size: 36px;
+    }
+
+    .orderConfirmationModalContent p {
+        font-size: 20px;
+    }
+}
+
 @media (max-width: 600px){
     .headline {
         flex-direction: column-reverse;
@@ -616,6 +626,12 @@ footer {
         align-items: center;
         gap: 10px;
         padding-top: 32px;
+    }
+}
+
+@media (max-width: 550px){
+    .orderConfirmationModalContent h3 {
+        font-size: 24px;
     }
 }
 
