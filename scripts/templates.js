@@ -65,7 +65,7 @@ function getFilledBasketMenuListTemplate(amount, name, price, dishesIndex, subtr
             <div class="basketMenuListElement">
                 <div class="basketMenuListElementDesc">
                     <p>${amount}x ${name}</p>
-                    <button onclick="deleteMenu(${dishesIndex});changeButtonToAdded(${dishesIndex})" id="basketDeleteBtn${dishesIndex}" class="btnBasketControls" aria-label="delete menu" aria-controls="basketContainer"><img src="./assets/icons/trash.png"></button>
+                    <button onclick="addMenu(${dishesIndex},-${amount});changeButtonToAdded(${dishesIndex})" id="basketDeleteBtn${dishesIndex}" class="btnBasketControls" aria-label="delete menu" aria-controls="basketContainer"><img src="./assets/icons/trash.png"></button>
                 </div>
                 <div class="basketMenuListElementDetails">
                     <div class="basketMenuListElementControls">

@@ -88,11 +88,6 @@ function addMenu(dishesIndex, value) {
     renderBasket();
 }
 
-function deleteMenu(dishesIndex) {
-    dishes[dishesIndex].amount = 0;
-    renderBasket();
-}
-
 function hideBasketDeleteBtn(hide, dishesIndex) {
     let basketDeleteBtnRef = document.getElementById('basketDeleteBtn'+dishesIndex);
     if (hide === true) {
