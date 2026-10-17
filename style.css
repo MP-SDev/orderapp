@@ -213,6 +213,7 @@ main {
     width: 100%;
     font-family: "Palanquin-Bold";
     font-size: 29px;
+    padding-right: 24px;
 }
 
 .closeBasket:hover {
@@ -337,6 +338,7 @@ main {
     background-color: #363534;
     color: #FDEADC;
     width: 500px;
+    height: 314px;
     border-radius: 30px;
     margin: 22% auto;
     display: flex;
@@ -623,21 +625,87 @@ footer {
     }
 }
 
-@media (max-height: 820px){
+@media (max-height: 770px) and (min-width: 801px){
+    .basketMenuList {
+        height: 350px;
+    }
+}
+
+@media (max-height: 720px) and (min-width: 801px){
+    .basketMenuList {
+        height: 300px;
+    }
+}
+
+@media (max-height: 670px) and (min-width: 801px){
     .basketMenuList {
         height: 250px;
     }
 }
 
-@media (max-height: 760px){
+@media (max-height: 620px) and (min-width: 801px){
     .basketMenuList {
         height: 200px;
     }
 }
 
-@media (max-height: 670px){
+@media (max-height: 570px) and (min-width: 801px){
+    .basket {
+        gap: 5px;
+    }
+
+    .basketSum {
+        gap: 0;
+    }
+}
+
+@media (max-height: 520px) and (min-width: 801px){
     .basketMenuList {
-        height: 150px;
+        height: 160px;
+    }
+}
+
+@media (max-height: 820px) and (max-width: 800px){
+    .basketMenuList {
+        height: 250px;
+    }
+}
+
+@media (max-height: 770px) and (max-width: 800px){
+    .basketMenuList {
+        height: 230px;
+    }
+}
+
+@media (max-height: 720px) and (max-width: 800px){
+    .basketMenuList {
+        height: 200px;
+    }
+}
+
+@media (max-height: 670px) and (max-width: 800px){
+    .basketMenuList {
+        height: 160px;
+    }
+}
+
+@media (max-height: 620px) and (max-width: 800px){
+    .basketMenuList {
+        height: 160px;
+    }
+
+    .basket {
+        gap: 5px;
+    }
+
+    .basketSum {
+        gap: 0;
+    }
+}
+
+@media (max-height: 560px) and (max-width: 800px){
+    .basketMenuList {
+        height: 120px;
     }
 }
 
