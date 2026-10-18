@@ -12,7 +12,7 @@ function renderMenu() {
             categorySelected = dishes[dishesIndex].category;
             categoryName = changeFirstLetterToUpperCase(dishes[dishesIndex].category);
             menuSectionsRef.innerHTML += getMenuSectionsTemplate(dishes[dishesIndex].category, categoryName);
-            }
+        }
         renderSectionMenu(dishes[dishesIndex].category, dishes[dishesIndex].name, dishes[dishesIndex].desc, dishes[dishesIndex].price, dishes[dishesIndex].img, dishesIndex, dishes[dishesIndex].amount);
         }
 }
@@ -105,20 +105,20 @@ function placeOrder() {
     if (window.matchMedia("(max-width: 800px)").matches) {
         hideBasketMobileView();
     }
-    orderConfirmationModalRef.style.display = "flex";
+    orderConfirmationModalRef.classList.remove("hide");
     setTimeout(function(){
-        orderConfirmationModalRef.style.display = "none"
+        orderConfirmationModalRef.classList.add("hide");
         }, 4000);
     window.onclick = function(event) {
         if (event.target == orderConfirmationModalRef) {
-            orderConfirmationModalRef.style.display = "none";
+            orderConfirmationModalRef.classList.add("hide");
         }
     }
 }
 
 function closeModal() {
     let orderConfirmationModalRef = document.getElementById('orderConfirmationModal');
-    orderConfirmationModalRef.style.display = "none";
+    orderConfirmationModalRef.classList.add("hide");
 }
 
 function resetBasket() {
@@ -133,7 +133,7 @@ function changeButtonToAdded(dishesIndex) {
     btnSectionMenuRef = document.getElementById('btnSectionMenu' + dishesIndex);
     if (dishes[dishesIndex].amount != 0) {
         btnSectionMenuRef.innerHTML = "Added" + " " + dishes[dishesIndex].amount;
-        btnSectionMenuRef.style.color = "#E76C1F";
+        btnSectionMenuRef.classList.add("btnDishesSelected");
     } else {
         changeButtonToNotAdded(dishesIndex);
     }
@@ -142,7 +142,7 @@ function changeButtonToAdded(dishesIndex) {
 function changeButtonToNotAdded(dishesIndex) {
     btnSectionMenuRef = document.getElementById('btnSectionMenu' + dishesIndex);
     btnSectionMenuRef.innerHTML = "Add to basket";
-    btnSectionMenuRef.style.color = "#363534";
+    btnSectionMenuRef.classList.remove("btnDishesSelected");
 }
 
 function showBasketMobileView() {
